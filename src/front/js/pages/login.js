@@ -65,7 +65,7 @@ const Login = () => {
       </Form.Group>
       <p>{errormessage}</p>
       <Button variant="primary" onClick={onSubmitHandler}>
-        Submit
+        Login
       </Button>
     </Form>,
   ];

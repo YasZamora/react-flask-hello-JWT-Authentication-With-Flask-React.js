@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom"; 
 import { Form, Button } from "react-bootstrap";
 
 const Signup = () => {
@@ -6,6 +7,7 @@ const Signup = () => {
   const [password, setPassword] = useState("");
   const [errormessage, setErrormessage] = useState("")
   console.log(password)
+  let history = useHistory();
   const onSubmitHandler = async () => {
     sessionStorage.setItem("email", email);
     // sessionStorage.setItem("password", password);
@@ -25,7 +27,8 @@ const Signup = () => {
         setErrormessage("Su usuario ya está registrado en plataforma") 
       }
       else 
-      {setErrormessage("Su usuario se ha creado con éxito")}
+      {setErrormessage("Su usuario se ha creado con éxito")
+      history.push("/login");}
 
 					// .then(resp =>  { console.log(resp.json)
           //   return resp.json()})
