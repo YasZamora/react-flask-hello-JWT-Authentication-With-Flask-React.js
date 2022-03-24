@@ -5,16 +5,16 @@ import { useHistory } from "react-router-dom";
 export const Navbar = () => {
   let history = useHistory();
   const logoutHandler = () => {
-    const token = sessionStorage.getItem("token");
-    const response = fetch(process.env.BACKEND_URL + "/api/logout", {
-      method: "DELETE",
-      headers: {
-        "Content-Type": "aplication/json",
-        Authorization: "Bearer " + token,
-      },
-    });
+    // const token = sessionStorage.getItem("token");
+    // const response = fetch(process.env.BACKEND_URL + "/api/logout", {
+    //   method: "DELETE",
+    //   headers: {
+    //     "Content-Type": "aplication/json",
+    //     Authorization: "Bearer " + token,
+    //   },
+    // });
     sessionStorage.clear();
-    history.push("/login");
+    history.push("/");
   };
 
   return (

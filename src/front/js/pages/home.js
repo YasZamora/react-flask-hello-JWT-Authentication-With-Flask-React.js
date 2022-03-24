@@ -3,7 +3,7 @@ import { Context } from "../store/appContext";
 import rigoImageUrl from "../../img/rigo-baby.jpg";
 import "../../styles/home.css";
 import Signup from "./signup.js";
-import Login from "./login.js"
+import Login from "./login.js";
 import {Form, Button} from "react-bootstrap";
 
 
@@ -31,6 +31,7 @@ export const Home = () => {
 				</p>
 			</div>
 		<Login />	
+		
 		</>
 	);
 };

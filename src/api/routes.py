@@ -67,7 +67,6 @@ def validation():
 @api.route("/logout", methods=["DELETE"])
 @jwt_required()
 def logout():
-    print("HOLA ALDO HAGAMOS EL PROYECTO DEJEMOS ESTE CODE")
     jti = get_jwt()["jti"]
     jwt_redis_blocklist.set(jti, "", ex=ACCESS_EXPIRES)
     return jsonify(msg="Access token revoked")    
