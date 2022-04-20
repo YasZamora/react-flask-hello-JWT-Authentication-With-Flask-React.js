@@ -38,7 +38,7 @@ const Signup = () => {
 					// .catch(error => console.log("Error loading message from backend", error));
   };
   return [
-    <Form>
+    <Form style={{width:"500px", height: "600px", margin:"auto", marginTop:"50px"}}>
       
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Email address</Form.Label>

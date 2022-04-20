@@ -14,7 +14,7 @@ export const Navbar = () => {
     //   },
     // });
     sessionStorage.clear();
-    history.push("/");
+    history.push("/login");
   };
 
   return (

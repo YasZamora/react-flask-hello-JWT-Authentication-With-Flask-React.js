@@ -12,6 +12,7 @@ import { Footer } from "./component/footer";
 import Signup from "./pages/signup";
 import  Login  from "./pages/login";
 import Dashboard from "./pages/dashboard";
+import Private from "./pages/private";
 
 //create your first component
 const Layout = () => {
@@ -28,14 +29,16 @@ const Layout = () => {
             <Route exact path="/">
               <Home />
             </Route>
-			<Route exact path="/Signup">
+			<Route exact path="/signup">
 			<Signup />
 			</Route>
-			<Route exact path="/Login">
+			<Route exact path="/login">
 			<Login />
 			</Route>
-      <Route exact path="/Dashboard">
-        <Dashboard />
+      <Route exact path="/private">
+        {/* <Dashboard /> */}
+        <Private component={Dashboard}/>
+        {/*a Private en línea 39 se le está pasando un componente dashboard como props */}
       </Route>      
             <Route exact path="/demo">
               <Demo />

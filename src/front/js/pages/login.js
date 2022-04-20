@@ -32,7 +32,7 @@ const Login = () => {
       );
     } else {
       sessionStorage.setItem("token", data.access_token)
-      history.push("/dashboard"); //Código para enviar a otra vista **
+      history.push("/private"); //Código para enviar a otra vista **
     }
 
     // .then(resp =>  { console.log(resp.json)
@@ -43,7 +43,7 @@ const Login = () => {
     // .catch(error => console.log("Error loading message from backend", error));
   };
   return [
-    <Form>
+    <Form style={{width:"500px", height: "600px", margin:"auto", marginTop: "50px"}} >
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Email address</Form.Label>
         <Form.Control
